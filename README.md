@@ -13,11 +13,42 @@ npm i all-dependencies -s
 const dependencies = require('all-dependencies');
 
 dependencies();
-// => {dependencies: ['a', 'b', 'd'], missing: ['c', 'e']}
+// => {
+		dependencies: ['a', 'b', 'd'],
+		missing: ['c', 'e'],
+		graph: {
+			nodes: [
+				{id: 'a', label: 'a'},
+				{id: 'b', label: 'b'},
+				{id: 'c', label: 'c'}
+			],
+			edges: [
+				{from: 'a', to: 'b'},
+				{from: 'b', to: 'c'},
+				{from: 'a', to: 'd'},
+				{from: 'a', to: 'e'}
+			]
+		}
+	}
 
 dependencies.list();
 // => ['a', 'b', 'd']
 
 dependencies.missing();
 // => ['c', 'e']
+
+dependencies.graph();
+// => {
+		nodes: [
+			{id: 'a', label: 'a'},
+			{id: 'b', label: 'b'},
+			{id: 'c', label: 'c'}
+		],
+		edges: [
+			{from: 'a', to: 'b'},
+			{from: 'b', to: 'c'},
+			{from: 'a', to: 'd'},
+			{from: 'a', to: 'e'}
+		]
+	}
 ```
