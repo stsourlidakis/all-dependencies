@@ -1,0 +1,26 @@
+{
+  "name": "all-dependencies",
+  "version": "1.0.0",
+  "description": "Recursively retrieve all dependencies for a Node.js project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stsourlidakis/all-dependencies.git"
+  },
+  "keywords": [
+    "dependencies",
+    "modules",
+    "list",
+    "tree",
+    "graph"
+  ],
+  "author": "Stavros Tsourlidakis <s.tsourlidakis@hotmail.com> (https://stsourlidakis.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stsourlidakis/all-dependencies/issues"
+  },
+  "homepage": "https://github.com/stsourlidakis/all-dependencies#readme"
+}
